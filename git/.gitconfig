@@ -1,0 +1,11 @@
+[user]
+	email = GBrentHurst@gmail.com
+	name = Brent Hurst
+[push]
+	default = simple
+[github]
+	user = brenthurst
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff

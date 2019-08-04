@@ -1,0 +1,55 @@
+" Greek keyboard equivalents for common commands
+:inoremap <expr> ξκ CleverEsc()
+:nnoremap α a
+:nnoremap ι i
+:nnoremap ξ j
+:nnoremap κ k
+:nnoremap η h
+:nnoremap λ l
+:nnoremap ο o
+
+" Spanish keyboard equivalents for common commands
+:nnoremap Ñ :
+" :nnoremap - /
+
+" tabs should be 4 spaces
+:set tabstop=4
+autocmd FileType html,php :setlocal tabstop=4
+autocmd FileType tex :setlocal tabstop=4
+
+" turn off red chars on long lines
+:let g:hllonglines = 0
+
+" turn off highlight timeout
+:let g:hltimeout = 0
+
+" I'm bad at typing
+:cabbrev Qa qa
+:inoremap kj <ESC>
+
+" ctrl+L can turn off highlight from insert mode
+:inoremap <c-L> <ESC>:nohlsearch<CR><c-L>a
+
+" enable arrow keys
+:let g:imawimp = 1
+
+" enable c++11 for the linter
+:let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra"
+
+" Couldn't see all colors without these lines
+:highlight tabline ctermfg=DarkGrey guifg=DarkGrey
+:highlight tablinesel ctermfg=Grey guifg=Grey
+:highlight Folded ctermfg=DarkGrey guifg=DarkGrey
+
+" Auto do () like {}
+:  autocmd FileType c,cpp,javascript,java,perl,cs :inoremap <buffer>{() (<CR>)<esc>O<BS><tab>
+
+" Set paste
+:nnoremap <leader>sp :set paste<CR>
+:nnoremap <leader>snp :set nopaste<CR>
+
+" latex
+" Compile pdf for gracepaper. Includes save.
+:nnoremap <leader>p :w<CR>:!./a.tmp<CR>
+" Cancel out Chris's mapping, which is a good idea but keeps messing with me
+:autocmd FileType tex :inoremap <buffer>{} {}

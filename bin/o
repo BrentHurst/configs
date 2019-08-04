@@ -1,0 +1,29 @@
+#!/bin/bash
+
+a="cmd.exe /C start"
+UBUNTUPATH="C:\Users\hurstgb\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs"
+
+if [ $# -lt 1 ]
+then
+	echo "You must provide arguments."
+	exit 1
+fi
+
+for arg in $@
+do
+	$a $arg
+
+	if [ $? -eq 0 ]
+	then
+		echo "$arg: Opened."
+	else
+		echo "$arg: Couldn't open. Trying to open it with path to ubuntu..."
+		file="${UBUNTUPATH}$(pwd | sed 's/\//\\/g')\\${arg}"
+		$a $file
+
+		if [ $? -ne 0 ]
+		then
+			echo "\t - Still couldn't open file."
+		fi
+	fi
+done

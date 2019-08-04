@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+	echo A commit message must be provided. Exiting.
+	exit 1
+else
+	git add . --all;
+	git commit -m "$@";
+	git push;
+fi
