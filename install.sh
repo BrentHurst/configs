@@ -8,7 +8,7 @@ then
 fi
 
 vbash=0
-vbin=0
+vbin=1
 vgit=0
 vvim=0
 force=0
@@ -17,7 +17,17 @@ bashrc_local="$HOME/.bashrc.local"
 CONFIG_DIR_GBH=$(dirname $(readlink -f $0))
 olddir="$CONFIG_DIR_GBH/.old"
 
-echo "export CONFIG_DIR_GBH=\"$CONFIG_DIR_GBH\"" >> $bashrc_local
+
+grep "export CONFIG_DIR_GBH=" $bashrc_local > /dev/null
+if [ $? -eq 0 ]
+then
+	sed -i "s,export CONFIG_DIR_GBH=.*,export CONFIG_DIR_GBH=\"$CONFIG_DIR_GBH\"," $bashrc_local
+else
+	echo "export CONFIG_DIR_GBH=\"$CONFIG_DIR_GBH\"" >> $bashrc_local
+fi
+
+
+
 if [ ! -d $olddir ]
 then
 	mkdir $olddir
@@ -84,7 +94,11 @@ fi
 
 if [ $vbin -eq 1 ]
 then
-	echo "export PATH=\"$CONFIG_DIR_GBH/bin:$PATH\"" >> $bashrc_local
+	grep "export PATH=\"$CONFIG_DIR_GBH/bin:\$PATH\"" $bashrc_local > /dev/null
+	if [ $? -ne 0 ]
+	then
+		echo "export PATH=\"$CONFIG_DIR_GBH/bin:\$PATH\"" >> $bashrc_local
+	fi
 	echo "bin: The config bin directory has been added to your PATH."
 fi
 
