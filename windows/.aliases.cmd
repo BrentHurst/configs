@@ -13,7 +13,7 @@ doskey ou=cd "C:\Users\hurstgb\Documents\Oft Used"
 doskey cdu=cd "C:\Users\hurstgb\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\brent"
 doskey cdc=cd "C:\Users\hurstgb\Documents\UTCourses\research\cai"
 doskey aliases=vim "C:\Users\hurstgb\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\brent\.aliases.cmd"
-doskey vimrc=vim "C:\Users\hurstgb\_vimrc"
+doskey vimrc=vim "C:\Users\hurstgb\.vimrc"
 
 doskey NoMargins="C:\Users\hurstgb\Documents\Custom Office Templates\NoMargins.dotx"
 doskey todo="C:\Users\hurstgb\Documents\Oft Used\To-Do List.xlsx"

@@ -53,3 +53,11 @@ autocmd FileType tex :setlocal tabstop=4
 :nnoremap <leader>p :w<CR>:!./a.tmp<CR>
 " Cancel out Chris's mapping, which is a good idea but keeps messing with me
 :autocmd FileType tex :inoremap <buffer>{} {}
+
+" Move brace to its own line
+:nnoremap <localleader>{ 0f{xo{<ESC>==
+
+
+:if !has('win32')
+:  nnoremap <silent><leader>elv :vsplit ~/.vimrc.local<CR>
+:endif

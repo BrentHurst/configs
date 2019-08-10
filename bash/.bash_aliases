@@ -55,6 +55,7 @@ alias gb="git branch"
 alias gl="git log"
 alias gll="echo 'git log --oneline --decorate --graph --all'; echo ""; git log --oneline --decorate --graph --all"
 alias gls="echo 'git log --oneline --decorate --graph --all -10'; echo ""; git log --oneline --decorate --graph --all -10"
+alias gdiff="git difftool"
 
 alias aliases="vim $HOME/.bash_aliases"
 alias brc="source $HOME/.bashrc"
