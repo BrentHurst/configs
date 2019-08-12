@@ -1,0 +1,42 @@
+#!/bin/bash
+
+dashes="----------"
+
+usage()
+{
+	echo "usage: $0 [show | pull] [dir]"
+	echo "       where \"dir\" is the top-level directory to recursively search through"
+	echo "       dir will default to \$HOME if not provided"
+}
+
+if [ $# -eq 1 ]
+then
+	dir="$HOME"
+elif [ $# -eq 2 ]
+then
+	dir="$2"
+else
+	usage
+	exit 1
+fi
+
+if [ "$1" = "show" ]
+then
+	cmd="git status; git remote show origin"
+elif [ "$1" = "pull" ]
+then
+	cmd="git pull"
+else
+	usage
+	exit 2
+fi
+
+for repo in $(find $HOME -name .git | sed "s/.git$//")
+do
+	cd $repo
+	echo ""
+	echo ""
+	echo ""
+	echo $dashes$repo$dashes
+	$cmd
+done
