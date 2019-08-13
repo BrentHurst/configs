@@ -14,7 +14,7 @@ Give the script the command line arguments of what you would like to install fro
 The bash config files are fairly self-explanatory. The `.inputrc` file is for vim keybindings. The `.dircolors*` files are for the colored output of `ls`; I had one on one machine when I created this repo and one on another machine, so I'm not sure yet which, if either, is more compatible across platforms. When I figure that out, I'll name it `.dircolors` and I'll delete `.dircolors.v2`. Once I actually take the time to sit down and write `.bash_logout`, it will enable `cd -` to work across sessions.
 
 ### bin
-This isn't for all the executables in my `~/bin`; it's just for what I consider as integral to my bash experience as my `.bashrc`. `spacesandparens` will remove spaces and parentheses from filenames. On the Ubuntu subsystem for Windows, `o` will open a pdf that's from the Windows file system. `gsave` aids in git adding/committing/pushing.
+`spacesandparens` will remove spaces and parentheses from filenames. On the Ubuntu subsystem for Windows, `o` will open a pdf that's from the Windows file system. `gsave` aids in git adding/committing/pushing. `gupdate` is useful for checking all git repos on a machine.
 
 ### git
 Right now, the only git file in this repo is a simple `.gitconfig` that probably isn't worth installing for anyone else.

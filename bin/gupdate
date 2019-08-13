@@ -22,10 +22,12 @@ fi
 
 if [ "$1" = "show" ]
 then
-	cmd="git status; git remote show origin"
+	cmd1="git status"
+	cmd2="git remote show origin"
 elif [ "$1" = "pull" ]
 then
-	cmd="git pull"
+	cmd1="git pull"
+	cmd2="echo \"\""
 else
 	usage
 	exit 2
@@ -38,5 +40,6 @@ do
 	echo ""
 	echo ""
 	echo $dashes$repo$dashes
-	$cmd
+	$cmd1
+	$cmd2
 done
