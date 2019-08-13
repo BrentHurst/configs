@@ -28,12 +28,16 @@ elif [ "$1" = "pull" ]
 then
 	cmd1="git pull"
 	cmd2="echo \"\""
+elif [ "$1" = "list" ]
+then
+	cmd1=""
+	cmd2=""
 else
 	usage
 	exit 2
 fi
 
-for repo in $(find $HOME -name .git | sed "s/.git$//")
+for repo in $(find $dir -name .git | sed "s/.git$//")
 do
 	cd $repo
 	echo ""
