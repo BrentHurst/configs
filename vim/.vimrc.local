@@ -61,3 +61,7 @@ autocmd FileType tex :setlocal tabstop=4
 :if !has('win32')
 :  nnoremap <silent><leader>elv :vsplit ~/.vimrc.local<CR>
 :endif
+
+" Override Chris's command to force sp to vs because sometime I need both
+:cabbrev sp <C-R>=CommandLineStart(":", "sp", "sp")<CR>
+:cabbrev Vs <C-R>=CommandLineStart(":", "vs", "Vs")<CR>

@@ -24,7 +24,6 @@ alias la="ls -la"
 alias lsa="ls -a"
 alias ll="ls -l"
 
-alias pl="pdflatex"
 alias du="du -h"
 alias x=exit
 alias cls="clear"

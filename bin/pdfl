@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+	echo "usage: $0 filetocompile.tex"
+	exit 1
+fi
+
+cc="pdflatex"
+# tex="paper.tex"
+# out="paper.pdf"
+# pdf="cgbhpaper.pdf"
+basename=$(echo "$1" | sed "s/.tex//")
+echo $basename
+
+numCompilations=3
+i=0
+
+while [ $i -lt $numCompilations ]
+do
+	echo "" | $cc $1
+	echo ""
+	echo ""
+	echo "-----------------"
+	echo ""
+	echo ""
+	i=$(($i+1))
+done
+
+rm -f $basename.log $basename.aux
+
+o $basename.pdf
