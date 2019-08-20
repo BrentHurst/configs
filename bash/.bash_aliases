@@ -72,8 +72,5 @@ then
 	alias hours="cmd.exe /C start C:/Users/hurstgb/Documents/UTCourses/SP19/302/taStuff/hours.xlsx"
 	alias "np++"="/mnt/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 	alias "np"="/mnt/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
-# Not Hydra
-elif [ $(echo $(hostname) | sed 's/.*.eecs.utk.edu/.eecs.utk.edu/') != ".eecs.utk.edu" ]
-then
 	alias u="ssh hydra"
 fi
