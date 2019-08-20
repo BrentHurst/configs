@@ -65,3 +65,9 @@ autocmd FileType tex :setlocal tabstop=4
 " Override Chris's command to force sp to vs because sometime I need both
 :cabbrev sp <C-R>=CommandLineStart(":", "sp", "sp")<CR>
 :cabbrev Vs <C-R>=CommandLineStart(":", "vs", "Vs")<CR>
+
+" .bat
+" :augroup batch
+" :  autocmd!
+" :  autocmd FileType bat :setlocal commentstring=REM\ %s
+" :augroup END
