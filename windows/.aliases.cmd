@@ -25,4 +25,7 @@ doskey mail="C:\Users\hurstgb\Documents\Shortcuts\Mail-Shortcut.lnk"
 
 doskey u=ubuntu1804
 
+REM For loading MSVC stuff
+"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+
 cls
