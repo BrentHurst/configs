@@ -1,5 +1,6 @@
 alias ..="cd .."
 alias ....="cd ../.."
+alias cd-="cd -"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -73,4 +74,5 @@ then
 	alias "np++"="/mnt/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 	alias "np"="/mnt/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 	alias u="ssh hydra"
+	alias un="ssh tmn678@neuro-firewall.eecs.utk.edu"
 fi
