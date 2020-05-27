@@ -70,9 +70,11 @@ then
 	alias todo="cmd.exe /C C:/Users/hurstgb/Documents/Oft\ Used/To-Do\ List.xlsx"
 	# alias o="cmd.exe /C start"
 	alias cdf="cd /mnt/c/Users/hurstgb/onedrive/finances"
+	alias cdg="cd ~/biblestudy/GreekIII/"
 	alias hours="cmd.exe /C start C:/Users/hurstgb/Documents/UTCourses/SP19/302/taStuff/hours.xlsx"
 	alias "np++"="/mnt/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 	alias "np"="/mnt/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 	alias u="ssh hydra"
 	alias un="ssh tmn678@neuro-firewall.eecs.utk.edu"
+	alias cdc="cd ~/research.lnk/cai/CAI_Tools/"
 fi
