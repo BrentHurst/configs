@@ -112,7 +112,7 @@ if [ $vvim -eq 1 ]
 then
 	setup_dir "vim"
 	rm -f $HOME/.vimrc
-	wget https://raw.githubusercontent.com/chrisdean258/Dotfiles/master/universal/vimrc -O $HOME/.vimrc
+	wget https://raw.githubusercontent.com/chrisdean258/Dotfiles/master/.vimrc -O $HOME/.vimrc
 	echo "vim: Chris's vimrc was successfully installed."
 	olddirused=1
 fi
