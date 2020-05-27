@@ -7,6 +7,7 @@
 	user = brenthurst
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [diff]
 	tool = vimdiff
 [difftool]
