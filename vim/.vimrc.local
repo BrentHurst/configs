@@ -20,6 +20,12 @@ autocmd FileType tex :setlocal tabstop=4
 " turn off red chars on long lines
 :let g:hllonglines = 0
 
+" manage 1 session
+":let g:manage_session = 1
+
+" manage multiple sessions
+:let g:manage_sessions = 1
+
 " turn off highlight timeout
 :let g:hltimeout = 0
 
@@ -62,7 +68,7 @@ autocmd FileType tex :setlocal tabstop=4
 :  nnoremap <silent><leader>elv :vsplit ~/.vimrc.local<CR>
 :endif
 
-" Override Chris's command to force sp to vs because sometime I need both
+" Override Chris's command to force sp to vs because sometimes I need both
 :cabbrev sp <C-R>=CommandLineStart(":", "sp", "sp")<CR>
 :cabbrev Vs <C-R>=CommandLineStart(":", "vs", "Vs")<CR>
 
@@ -71,3 +77,16 @@ autocmd FileType tex :setlocal tabstop=4
 " :  autocmd!
 " :  autocmd FileType bat :setlocal commentstring=REM\ %s
 " :augroup END
+
+
+" txtfl
+if has("autocmd")
+	:augroup txtfl
+	:autocmd!
+	:  autocmd BufNew,BufRead *.txtfl :setlocal filetype=text
+	:  autocmd BufNew,BufRead *.txtfl :setlocal nospell
+	":  autocmd FileType text :setlocal spelllang=en_us,de_20
+	:augroup END
+:endif
+
+:inoremap <buffer> sre throw SRE((string) " j = \n" + j.dump(4));<ESC>21hi
