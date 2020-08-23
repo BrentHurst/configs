@@ -81,12 +81,24 @@ autocmd FileType tex :setlocal tabstop=4
 
 " txtfl
 if has("autocmd")
-	:augroup txtfl
-	:autocmd!
-	:  autocmd BufNew,BufRead *.txtfl :setlocal filetype=text
-	:  autocmd BufNew,BufRead *.txtfl :setlocal nospell
+	" :augroup txtfl
+	" :autocmd!
+	" :  autocmd BufNew,BufRead *.txtfl :setlocal filetype=text
+	" :  autocmd BufNew,BufRead *.txtfl :setlocal nospell
 	":  autocmd FileType text :setlocal spelllang=en_us,de_20
+	" :augroup END
+	
+	:augroup r_
+	:autocmd!
+	:autocmd FileType r  :setlocal tabstop=4
+	:autocmd FileType r  :autocmd BufRead,BufWrite <buffer> :silent call RemoveTrailingWhitespace()
+	:autocmd FileType r  :autocmd BufEnter <buffer> :if getline(1) !~ '^#' | call append(0, "#!/usr/bin/env Rscript") | endif
 	:augroup END
 :endif
 
-:inoremap <buffer> sre throw SRE((string) " j = \n" + j.dump(4));<ESC>21hi
+
+:call add(g:syntastic_cpp_include_dirs, $HOME . "/research.lnk/cai/CAI_Tools/include/")
+
+:nnoremap `` bi{<ESC>ea}<ESC>F{i\code<ESC>3l
+
+:nnoremap <leader>r :%s/ = / <- /g

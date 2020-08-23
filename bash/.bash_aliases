@@ -38,6 +38,7 @@ alias vimO="vim -O"
 alias sl="ls"
 alias bc="bc -l"
 alias make="make -r"
+alias makecm="make -r clean ; make"
 
 ### git ###
 alias gst="git status"
@@ -68,6 +69,7 @@ then
 	alias word="cmd.exe /C C:/Program\ Files/Microsoft\ Office\ 15/root/office15/winword.exe"
 	alias nomargins="cmd.exe /C C:/Users/hurstgb/Documents/Custom\ Office\ Templates/NoMargins.dotx"
 	alias todo="cmd.exe /C C:/Users/hurstgb/Documents/Oft\ Used/To-Do\ List.xlsx"
+	alias chrome="/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
 	# alias o="cmd.exe /C start"
 	alias cdf="cd /mnt/c/Users/hurstgb/onedrive/finances"
 	alias cdg="cd ~/biblestudy/GreekIII/"
@@ -77,4 +79,7 @@ then
 	alias u="ssh hydra"
 	alias un="ssh tmn678@neuro-firewall.eecs.utk.edu"
 	alias cdc="cd ~/research.lnk/cai/CAI_Tools/"
+	alias cdcp="cd ~/research.lnk/cai/CplexCompute/"
+	alias cdcg="cd ~/research.lnk/cai/GurobiCompute/"
+	alias cdo="cd /mnt/c/Users/hurstgb/OneDrive"
 fi
