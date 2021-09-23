@@ -102,3 +102,5 @@ if has("autocmd")
 :nnoremap `` bi{<ESC>ea}<ESC>F{i\code<ESC>3l
 
 :nnoremap <leader>r :%s/ = / <- /g
+
+:inoremap cl<leader> console.log
