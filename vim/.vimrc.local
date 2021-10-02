@@ -104,3 +104,5 @@ if has("autocmd")
 :nnoremap <leader>r :%s/ = / <- /g
 
 :inoremap cl<leader> console.log
+
+:set t_u7=
