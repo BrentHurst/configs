@@ -97,7 +97,7 @@ if has("autocmd")
 :endif
 
 
-:call add(g:syntastic_cpp_include_dirs, $HOME . "/research.lnk/cai/CAI_Tools/include/")
+" :call add(g:syntastic_cpp_include_dirs, $HOME . "/research.lnk/cai/CAI_Tools/include/")
 
 :nnoremap `` bi{<ESC>ea}<ESC>F{i\code<ESC>3l
 
