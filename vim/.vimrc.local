@@ -31,7 +31,7 @@ autocmd FileType tex :setlocal tabstop=4
 
 " I'm bad at typing
 :cabbrev Qa qa
-:inoremap kj <ESC>
+:inoremap kj <ESC>l
 
 " ctrl+L can turn off highlight from insert mode
 :inoremap <c-L> <ESC>:nohlsearch<CR><c-L>a
@@ -97,7 +97,7 @@ if has("autocmd")
 :endif
 
 
-:call add(g:syntastic_cpp_include_dirs, $HOME . "/research.lnk/cai/CAI_Tools/include/")
+" :call add(g:syntastic_cpp_include_dirs, $HOME . "/research.lnk/cai/CAI_Tools/include/")
 
 :nnoremap `` bi{<ESC>ea}<ESC>F{i\code<ESC>3l
 
