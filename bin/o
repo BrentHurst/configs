@@ -1,7 +1,7 @@
 #!/bin/bash
 
 a="cmd.exe /C start"
-UBUNTUPATH="C:\Users\hurstgb\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs"
+UBUNTUPATH="C:\Users\SequatchieTechDept\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs"
 
 if [ $# -lt 1 ]
 then
