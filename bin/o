@@ -1,7 +1,8 @@
 #!/bin/bash
 
 a="cmd.exe /C start"
-UBUNTUPATH="C:\Users\SequatchieTechDept\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs"
+# UBUNTUPATH="C:\Users\SequatchieTechDept\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs"
+UBUNTUPATH="\\wsl.localhost\Ubuntu-22.04"
 
 if [ $# -lt 1 ]
 then
