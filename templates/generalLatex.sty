@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{mathptmx}
+\usepackage{url}
+\usepackage[multiple]{footmisc}
+
+\usepackage{graphicx}
+\graphicspath{ {.} }
+\usepackage{wrapfig}
+
+\usepackage{hyperref}
+
+
+
+\usepackage[showdow,english]{datetime2}
+\DTMnewdatestyle{mydateformat}{%
+  \renewcommand{\DTMdisplaydate}[4]{%
+    \number##1\nobreakspace%                       year
+    \DTMmonthname{##2}\nobreakspace%  (full) Month
+    \ifnum ##3 < 10 0\fi \number##3% day
+    % 0\number##3%                day,
+  }%
+  \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+\DTMsetdatestyle{mydateformat}
+
+
+
+
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=12pt}
+
+\usepackage{tabto}
+\NumTabs{16}
+\usepackage[super]{nth}
+
+\setlength{\textheight}{9in} %.
+\setlength{\columnsep}{2.0pc} %.
+\setlength{\textwidth}{6.5in} %.
+\setlength{\topmargin}{0.in} %.
+\setlength{\headheight}{0.0in} %.
+\setlength{\headsep}{0.0in} %.
+\setlength{\oddsidemargin}{0in} %.
+\setlength{\parindent}{1pc} %.
+
+\addtolength{\skip\footins}{2pc}
+
+\pagenumbering{arabic}
+
+\frenchspacing
+
+\newcommand\bibleblock[1]{
+    \begin{small}
+        \begin{quote}
+            #1
+        \end{quote}
+    \end{small}
+}
+
+% DEFAULT TRANSLATION-LSB
+
+% biblefn : bfn
+% bibleb  : bb
