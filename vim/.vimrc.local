@@ -10,7 +10,10 @@
 
 " Spanish keyboard equivalents for common commands
 :nnoremap Ñ :
+:inoremap ªª ~
+:inoremap çç \
 " :nnoremap - /
+
 
 " tabs should be 4 spaces
 :set tabstop=4
@@ -59,6 +62,8 @@ autocmd FileType tex :setlocal tabstop=4
 :nnoremap <leader>p :w<CR>:!./a.tmp<CR>
 " Cancel out Chris's mapping, which is a good idea but keeps messing with me
 :autocmd FileType tex :inoremap <buffer>{} {}
+:autocmd FileType tex :inoremap bfn \footnote{biblefn{}}<ESC>hi
+:autocmd FileType tex :inoremap bb \bibleblock{bibleblockinner{}}<ESC>hi
 
 " Move brace to its own line
 :nnoremap <localleader>{ 0f{xo{<ESC>==
@@ -103,6 +108,6 @@ if has("autocmd")
 
 :nnoremap <leader>r :%s/ = / <- /g
 
-:inoremap cl<leader> console.log
+" :inoremap cl<leader> console.log
 
 :set t_u7=
