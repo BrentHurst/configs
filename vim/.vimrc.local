@@ -62,8 +62,11 @@ autocmd FileType tex :setlocal tabstop=4
 :nnoremap <leader>p :w<CR>:!./a.tmp<CR>
 " Cancel out Chris's mapping, which is a good idea but keeps messing with me
 :autocmd FileType tex :inoremap <buffer>{} {}
-:autocmd FileType tex :inoremap bfn \footnote{biblefn{}}<ESC>hi
-:autocmd FileType tex :inoremap bb \bibleblock{bibleblockinner{}}<ESC>hi
+:autocmd FileType tex :inoremap \bfn \footnote{biblefn{}}<ESC>hi
+:autocmd FileType tex :inoremap \bb \bibleblock{bibleblockinner{}}<ESC>hi
+:autocmd FileType tex :inoremap \s<leader> \section*{}<ESC>i
+:autocmd FileType tex :inoremap \ss<leader> \subsection*{}<ESC>i
+:autocmd FileType tex :inoremap \sss<leader> \subsubsection*{}<ESC>i
 
 " Move brace to its own line
 :nnoremap <localleader>{ 0f{xo{<ESC>==
